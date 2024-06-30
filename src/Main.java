@@ -27,5 +27,18 @@ public class Main {
                 else
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
+        int year = 2021;
+        if (year >= 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+        {
+            System.out.println(year + " год является високосным");
+        }
+        else if (year < 1584)
+        {
+            System.out.println(year + " год находится на числовой оси до введения високосного года в 1584");
+        }
+        else
+        {
+            System.out.println(year + " год не является високосным");
+        }
     }
 }
