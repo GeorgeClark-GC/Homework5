@@ -10,22 +10,23 @@ public class Main {
         {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-        switch (clientOS)
-        {
+        switch (clientOS) {
             case 0:
-                if (clientDeviceYear > 2014)
-                {
+                if (clientDeviceYear > 2014) {
                     System.out.println("Установите версию приложения для iOS по ссылке");
-                }
-                else
+                    break;
+                } else
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                break;
             case 1:
-                if (clientDeviceYear > 2014)
-                {
+                if (clientDeviceYear > 2014) {
                     System.out.println("Установите версию приложения для Android по ссылке");
+                    break;
                 }
                 else
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            default:
+                System.out.println("");
         }
         int year = 2021;
         if (year >= 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
@@ -41,18 +42,17 @@ public class Main {
             System.out.println(year + " год не является високосным");
         }
         int deliveryDistance = 95;
-        int deliveryTime = 0;
+        int deliveryTime = 1;
         if (deliveryDistance <= 20)
         {
-            deliveryTime ++;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
         else if (deliveryDistance <=60) {
-            deliveryTime = deliveryTime + 2;
+            deliveryTime = deliveryTime + 1;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
         else if (deliveryDistance <=100) {
-            deliveryTime = deliveryTime + 3;
+            deliveryTime = deliveryTime + 2;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
         else
